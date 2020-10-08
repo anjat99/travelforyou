@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="assets/css/fontawesome-free-5.11.2-web/css/all.min.css">
+        <title>Best Online Travel Agency | TravelForYou | Places just for your soul</title>
+        <link rel="shortcut icon" href="assets/images/favicon.ico" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="assets/css/colorbox.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/jquery-letterfx.min.css">
+        <link href="assets/css/style.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/responsive.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"/>
+        <meta name="author" content="mailto:anja&#46;tomic099&#64;gmail&#46;com" />
+        <meta name="description" content="The largest online travel agency in the world.Browse millions of traveler reviews and opinions and book popular tours and vacations." />
+        <meta name="author" content="Anja Tomić" />
+        <meta name="keywords" content="online travel agency, holiday destinations, cheap vacations, cheap travel, vacation package plans" />
+</head>
+<body>
+<!--glavna navigacija i logo-->
+    <nav class="container-fluid" id="navigacija" >
+        <div class="logoHeader">
+        </div>
+        <div class="nav">
+        </div>
+        <div class="registrLog">
+            <button type="button" id="login" class="bttnLog" data-modal="modalLogin">LogIn<i class="fas fa-sign-in-alt"></i></button>
+            <div id="modalLogin"class="modal">
+                <div class="sadrzajModalaLogin">
+                    <a id="zatvoriLogin">&times;</a>
+                    <form action="#" id="formaLogin"> 
+                        <div class="form-row">
+                            <div class="col-lg-6">
+                                <label for="fName">First Name</label>
+                                <input type="text" class="form-control" placeholder="" id="fName">
+                                <p class="text-danger" id="fname-error"></p>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="lName">Last Name</label>
+                                <input type="text" class="form-control" placeholder="" id="lName">
+                                <p class="text-danger" id="lname-error"></p>
+                            </div>
+                        </div>
+                        <div class="form-group mt-1">
+                                <label for="emailLog">Email address</label>
+                                <input type="text" class="form-control" id="emailLog" aria-describedby="emailHelp" placeholder="">
+                                <p class="text-danger" id="email-error"></p>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="password">  Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="">
+                                <p class="text-danger" id="password-error"></p>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="cpassword"> Confirm Password</label>
+                                <input type="password" class="form-control" id="cpassword" placeholder="">
+                                <p class="text-danger" id="cpassword-error"></p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="checkTerms">
+                                <label class="form-check-label" for="checkTerms">I agree to the Terms and Conditions</a>
+                                    <p class="text-danger" id="agree-error"></p>
+                                </label>
+                            </div>
+                        </div>
+                        <button type="button" id="loginBtn" class="btn btn-primary">Log in</button>
+                    </form> 
+                </div>
+            </div>
+        </div>
+    </nav>
+<!--// end --> 
+<!--navigacija za mobilne uredjaje i logo-->
+    <nav id="mob">
+        <div class="logoHeader">
+        </div>
+        <div class="nav">
+        </div>
+        <div class="registrLog col-lg-3" >
+            <button type="button" id="login"><i class="fas fa-sign-in-alt"></i></button>
+            <div id="modalLogin"class="modal">
+                <div class="sadrzajModalaLogin">
+                    <a id="zatvoriLogin">&times;</a>
+                    <form action="#" id="formaLogin"> 
+                        <div class="form-row">
+                            <div class="col-lg-6">
+                                <label for="fName">First Name</label>
+                                <input type="text" class="form-control" placeholder="" id="fName">
+                                <p class="text-danger" id="fname-error"></p>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="lName">Last Name</label>
+                                <input type="text" class="form-control" placeholder="" id="lName">
+                                <p class="text-danger" id="lname-error"></p>
+                            </div>
+                        </div>
+                        <div class="form-group mt-1">
+                            <label for="emailLog">Email address</label>
+                            <input type="text" class="form-control" id="emailLog" aria-describedby="emailHelp" placeholder="">
+                            <p class="text-danger" id="email-error"></p>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="password">  Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="">
+                                <p class="text-danger" id="password-error"></p>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="cpassword"> Confirm Password</label>
+                                <input type="password" class="form-control" id="cpassword" placeholder="">
+                                <p class="text-danger" id="cpassword-error"></p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="checkTerms">
+                                <label class="form-check-label" for="gridCheck">I agree to the <a href="#" class="text">Terms and Conditions</a>
+                                </label>
+                                <p class="text-danger" id="agree-error"></p>
+                            </div>
+                        </div>
+                        <button type="button" id="loginBtn" class="btn btn-primary">Log in</button>
+                    </form> 
+                </div>
+            </div>
+        </div>       
+    </nav>
+<!--// end -->
+<!--hamburger ikonica-->   
+    <div id="hamburgerIkonica">
+        <a href="#"><i class="fas fa-bars"></i></a>
+    </div>  
+<br><br><br><br>
+<!-- INTRO -->
+    <div class="intro container-fluid">
+        <div class="wrapper row">
+            <div id="over" class="col-lg-12">
+                <h1 id="typewriteText">Planning Trip  To Anywhere in The World? Our Online travel agency is the right for your choice..</h1>
+            </div>
+        </div>
+    </div> <!-- end #intro -->
+<!--// INTRO -->
+<!-- ABOUT -->
+    <section id="adventages">
+        <div class="wrapper">
+            <div class="advWrap" id="pogodnosti">
+                
+            </div>
+        </div><!-- end .wrapper -->
+    </section><!-- end #adventages -->
+<!--// ABOUT --> 
+<br><br>
+<!-- CLIENTS -->
+    <section id="clients">
+        <div class="wrapper">
+            <h2>Our satisfied customer says</h2>
+            <div class="advWrap" id="klijenti">      
+            </div>
+        </div><!-- end .wrapper -->
+    </section><!-- end #clients -->
+<!--// CLIENTS --> 
+
+<!-- INTRO -->
+    <div class="intro1">
+        <div class="wrapper">
+            <div id="over">
+                <h2>Plans for Everyone - Find Vacation Package Plan only for your budget</h2>
+            </div>
+        </div>
+    </div> <!-- end #intro -->
+<!--// INTRO -->
+<!-- CONTENT -->
+    <main>
+        <div class="wrapperFooter" id="ponude">
+            <section id="trips">
+                <h2>Choose cheap vacations for you</h2>
+                <p>Join over 1 Million of users and choose the best plan for your next vacation. Suprise your family, cousins, friends with lovely trip and we are going to help you with it as well as to give you some more suprises that even you don't know yet.Every year we make special vacation package plan for those people who don't have opportunity to pay that much money.</p>
+            </section>
+        </div>
+    </main> 
+<!--// CONTENT -->
+
+<!-- destinations -->
+<!-- CONTENT -->
+    <main id="destinacije">
+        <section id="dest1">
+            <div class="wrapper">
+                <h2><b><i>Trip With Your Favourite holiday destinations<i></b></h2>
+                <p>Take a look at these offers</p>
+                <div class="advWrap" id="destinacijeOkvir"> 
+                </div>
+            </div>
+        </section>
+        <section id="dest2">
+             <div class="wrapper">
+                <h2>Popular destinations in 2019</h2>
+                <p>Take a look at these offers</p>
+                <div class="advWrap" id="popularneDestinacije"> 
+                </div>
+            </div>
+        </section>
+    </main>
+<!-- //CONTENT-->
+<!-- //destination -->
+
+<!-- INTRO -->
+    <div id="kontakt">
+        <div class="intro2">
+            <div class="wrapper">
+                <div id="over">
+                    <h2>Get in touch!</h2>
+                </div>
+            </div>
+        </div> <!-- end #intro -->
+    </div>
+<!--// INTRO -->
+<!-- CONTENT -->  
+    <div id="central">
+        <div class="wrapperMain container-fluid">
+            <main id="mainContact">
+                <h2>Fill in this form if you want to find out more...</h2>
+                    <article id="forma">
+                        <form method="" action=""  id="formaKontakt">
+                            <input type="text" name="name" id="name" placeholder="Full Name"/>
+                            <p class="text-danger" id="imeGreska"></p>
+                            <input type="text" name="email" id="email" placeholder="Your Email"/><br/>
+                            <p class="text-danger" id="emailGreska"></p>
+                            <input type="text" name="subj" id="subj" placeholder="Subject"/>
+                            <textarea cols="225" rows="10" placeholder="Write your notes or questions here..." id="pitanja"></textarea>
+                            <p class="text-danger podebljaj" id="pitanjaGreska"></p>
+                            <button type="button"><i class="fab fa-telegram-plane"></i></button>
+                        </form>
+                    </article>
+            </main>
+            <aside id="sidebarContact">
+                <div class="contact">
+                    <section id="contact">
+                    </section>
+                </div>
+                <div class="contact">
+                    <section id="info">
+                        <figure id="picture">
+                            <img src="assets/images/passenger.jpg" alt="info" />
+                        </figure>
+                        <div id="text">
+                            <h3>More info</h3>
+                            <p>With TraveForYou, you book a trip where every detail has been taken care of by us. And this is incredibly convenient. We know that most people will visit at least 3 different destinations when travelling to Cuba. This means making decisions, concerning choice of destination, costs and availability. </p>
+                            <div id="dodatak">
+                                <p>You will need transport. Will you be driving yourself? Or will you need a driver? Or would you prefer to use public transport? And what would you like to see? What are your interests? Booking a great trip to Cuba will take hours of your valuable time. Because you will need to make a lot of decisions. Important decisions. When you do all of this yourself, the consequences of these decisions will travel with you, and your travel companions.</p>  
+                            </div>
+                            <a href="#" class="bttn" id="saznajVise"><strong>Learn more&raquo;</strong></a>
+                        </div>
+                    </section>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+<!--// CONTENT -->  
+
+<!-- newsletter -->
+    <section id="newsLetter" class="container-fluid">
+        <div class="col-lg-12 wrapper">
+            <h2>Subscribe to our Newsletter</h2>
+            <p>Be the first to know about new benefits that we offer </p>
+            <form action="" method="" id="formaObavestenje">
+                <input type="text" id="newsletterEmail" placeholder="Enter Email... " value=""/>
+                <span class="emailVesti-greska">*Email isn't valid. It needs to be lowercase in format: something@gmail.com</span><br>
+                <input type="button" id="btnNewsletterEmail" value="Subscribe"/>
+                <div class="cleaner"></div>
+            </form>
+        </div>
+    </section>
+<!--// newsletter -->
+
+<!-- Footer -->
+    <footer class="footer container-fluid">
+        <div class="row rowFooter">
+            <div class="col-lg-3 col-md-5 col-sm-6"id="aboutUs">
+                <h3><strong>About us</strong></h3>
+                <p>Begin a chat with Travel4U and our AIl powered bot will scour hundreds of sources to find you the best hotel deals. Our bot is backed by a team of human travel agent ninjas available 24/7 over chat. As a bonus, we will call the hotel on check-in day to negotiate a free upgrade on your behalf (subject to availability and approval by the hotel)!</p>
+                <p>Copyright &copy;2019. <em>All rights reserved.</em> | by Travel4U </p>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3 odvoji" >
+                <h3><em>Navigation</em></h3>
+                <div class="nav link"> </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-3 odvoji">
+                <h3><em>Useful links</em></h3>
+                <div id="links2">
+                    <div class="link">
+                        <ul>
+                            <li>
+                                <a href="documentation.pdf">Documantation</a>
+                            </li>
+                            <li>
+                                <a href="sitemap.xml">Sitemap</a>
+                            </li>
+                            <li>
+                                <a id="autor" data-modal="modalAutor">Author</a>
+                                <div id="modal"class="modal">
+                                    <div class="sadrzajModala">
+                                        <a id="zatvori">&times;</a>
+                                        <figure id="autorImg">
+                                            <img src="assets/images/autor.png" alt="autor"/>
+                                        </figure>
+                                        <h2>Anja Tomić</h2>
+                                        <p>Number of index: 7/18</p>
+                                        <p>Birthdate: 31.08.1999</p>
+                                        <a id="otvoriNoviTab">Portfolio</a><br>
+                                        <p>
+                                            Hello! My name is Anja Tomić and I come from Pancevo, one place near the capital of Serbia, Belgrade. <br/>
+                                            I graduated from the Electrical Engineering School "Nikola Tesla" in Pancevo. I am currently studying Internet technology at the "Visoka ICT" School in Belgrade. <br/>
+                                            This site, for now was only created for the course of Web programming 1. <br/>
+                                            Although I have learned so many things from this field so far, in the future I plan to improve my knowledge and most likely continue to do my job. 
+                                            If you want to know more about me visit my portfolio page on the link above...
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-5 col-sm-6 odvoji">
+                <h3 ><em>Latest news</em></h3>
+                    <div id="latestNews">
+                    </div>
+            </div>
+            <div class="col-lg-2 col-md-5 col-sm-6 odvoji">
+                <h3><em>Tags</em></h3>
+                    <div id="tags">
+                    </div>
+            </div>
+        </div>
+    </footer>
+    <div id="scrollTop">
+        <a href="#">
+            <i class="fas fa-angle-double-up goToTop"></i>
+        </a>
+    </div>
+
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="assets/js/jquery.colorbox-min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-letterfx.min.js"></script>
+    <script src="assets/js/main.min.js"></script>
+</body>
+</html>
